@@ -39,6 +39,7 @@ class Mutt < Formula
   option "with-debug", "Build with debug option enabled"
   option "with-trash-patch", "Apply trash folder patch"
   option "with-s-lang", "Build against slang instead of ncurses"
+  option "with-sidebar-patch", "Apply sidebar patch"
   option "with-ignore-thread-patch", "Apply ignore-thread patch"
   option "with-pgp-verbose-mime-patch", "Apply PGP verbose mime patch"
   option "with-confirm-attachment-patch", "Apply confirm attachment patch"
@@ -55,6 +56,12 @@ class Mutt < Formula
     url "ftp://ftp.openbsd.org/pub/OpenBSD/distfiles/mutt/trashfolder-1.5.22.diff0.gz"
     sha1 "c597566c26e270b99c6f57e046512a663d2f415e"
   end if build.with? "trash-patch"
+
+  # added accordingly from http://stackoverflow.com/questions/20883936/how-to-apply-this-mutt-sidebar-patch
+  patch do
+    url "https://raw.github.com/nedos/mutt-sidebar-patch/7ba0d8db829fe54c4940a7471ac2ebc2283ecb15/mutt-sidebar.patch"
+    sha1 "1e151d4ff3ce83d635cf794acf0c781e1b748ff1"
+  end if build.with? "sidebar-patch"
 
   # original source for this went missing, patch sourced from Arch at
   # https://aur.archlinux.org/packages/mutt-ignore-thread/
