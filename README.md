@@ -1,14 +1,18 @@
 # homebrew-patches
-Homebrew custom tap repository
 
-# Contains
- * [Mutt including sidebar-patch](https://github.com/dennisdegreef/homebrew-patches/blob/master/mutt.rb)
+My "taps" for Mac Homebrew formulae which have patches not accepted by mxcl/homebrew.
 
-# Usage
-```bash
-# Tap the repository
-brew tap dennisdegreef/patches
+### Usage
 
-# Install mutt with new patches
-brew install dennisdegreef/patches/mutt --with-sidebar
-```
+You can access this repository using `brew tap`:
+
+    brew tap dennisdegreef/patches
+    brew install ...
+
+Since these formulae will likely have collisions with standard mxcl/homebrew formulae, you can:
+
+    brew install dennisdegreef/patches/<formula>
+
+### License
+
+See [LICENSE.md](LICENSE.md) for details.
