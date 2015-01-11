@@ -59,7 +59,7 @@ class Mutt < Formula
 
   # added accordingly from http://stackoverflow.com/questions/20883936/how-to-apply-this-mutt-sidebar-patch
   patch do
-    url "https://raw.github.com/nedos/mutt-sidebar-patch/7ba0d8db829fe54c4940a7471ac2ebc2283ecb15/mutt-sidebar.patch"
+    url "https://raw.githubusercontent.com/dennisdegreef/mutt-sidebar-patch/7ba0d8db829fe54c4940a7471ac2ebc2283ecb15/mutt-sidebar.patch"
     sha1 "1e151d4ff3ce83d635cf794acf0c781e1b748ff1"
   end if build.with? "sidebar-patch"
 
